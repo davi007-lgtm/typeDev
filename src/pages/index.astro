@@ -1,11 +1,47 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import { TypingGame } from "../components/TypingGame";
+import { I18nSelector } from "../components/I18nSelector";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Practice Coding Speed">
+	<main class="min-h-screen py-10">
+		<nav
+			class="max-w-6xl mx-auto px-6 mb-12 flex justify-between items-center"
+		>
+			<div class="flex items-center space-x-2">
+				<div
+					class="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center font-bold text-black text-xl"
+				>
+					T
+				</div>
+				<span class="text-2xl font-black tracking-tighter text-white"
+					>TypeDev</span
+				>
+			</div>
+			<div class="flex items-center space-x-4">
+				<I18nSelector client:load />
+			</div>
+		</nav>
+
+		<TypingGame client:load />
+
+		<footer
+			class="max-w-6xl mx-auto px-6 mt-20 pb-10 border-t border-white/5 pt-10 text-center"
+		>
+			<p class="text-gray-500 text-sm">
+				Inspired by Monkeytype. Built with Astro, React and Tailwind.
+			</p>
+		</footer>
+	</main>
 </Layout>
+
+<style>
+	main {
+		background: radial-gradient(
+			circle at 50% 0%,
+			rgba(234, 179, 8, 0.05) 0%,
+			transparent 50%
+		);
+	}
+</style>
