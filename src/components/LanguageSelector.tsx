@@ -71,8 +71,8 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({ currentLang,
                         key={lang.id}
                         onClick={() => onChange(lang.id)}
                         className={`group px-5 py-3 rounded-xl border transition-all duration-300 flex items-center space-x-3 shadow-md ${isSelected
-                                ? 'bg-white/10 border-white/20 text-white translate-y-[-2px] ring-2 ring-white/10'
-                                : 'bg-white/5 border-white/5 text-gray-500 hover:border-white/20 hover:text-gray-300 hover:translate-y-[-1px]'
+                            ? 'bg-white/10 border-white/20 text-white translate-y-[-2px] ring-2 ring-white/10'
+                            : 'bg-white/5 border-white/5 text-gray-500 hover:border-white/20 hover:text-gray-300 hover:translate-y-[-1px]'
                             }`}
                         style={{
                             boxShadow: isSelected ? `0 10px 25px -5px ${lang.color}20` : 'none'
