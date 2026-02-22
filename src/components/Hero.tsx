@@ -111,15 +111,15 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
                 </div>
 
                 {/* Main title */}
-                <div className="select-none" style={{ position: 'relative', lineHeight: 1, marginBottom: 'clamp(3rem, 8vw, 6rem)' }}>
+                <div className="select-none w-full" style={{ position: 'relative', lineHeight: 1, marginBottom: 'clamp(1.5rem, 5vw, 6rem)' }}>
                     {/* Main text */}
                     <h1
                         className="font-black italic uppercase"
                         style={{
-                            fontSize: 'clamp(5rem, 10vw, 10rem)',
+                            fontSize: 'clamp(2.5rem, 10vw, 10rem)',
                             letterSpacing: '-0.02em',
                             color: '#eab308',
-                            textShadow: '6px 6px 0px #1a1400, 10px 10px 0px rgba(0,0,0,0.5)',
+                            textShadow: 'clamp(2px, 0.4vw, 6px) clamp(2px, 0.4vw, 6px) 0px #1a1400, clamp(4px, 0.7vw, 10px) clamp(4px, 0.7vw, 10px) 0px rgba(0,0,0,0.5)',
                             fontFamily: "'Geist', 'Arial Black', sans-serif",
                             lineHeight: 0.9,
                         }}
@@ -127,8 +127,9 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
                         {t.title}
                     </h1>
                 </div>
+
                 {/* Subtitle */}
-                <p className="text-lg md:text-xl text-gray-500 max-w-xl mb-10 leading-relaxed font-light">
+                <p className="text-base md:text-lg lg:text-xl text-gray-500 max-w-xl mb-8 md:mb-10 leading-relaxed font-light px-2">
                     {t.description.split('<0>').map((text, i) =>
                         i === 1
                             ? <strong key={i} className="text-gray-200 font-semibold">{text.split('</0>')[0]}</strong>
