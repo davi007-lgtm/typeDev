@@ -111,12 +111,22 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
                 </div>
 
                 {/* Main title */}
-                <h1 className="text-7xl md:text-9xl font-black tracking-tighter mb-6 leading-none">
-                    <span className="bg-gradient-to-b from-white via-white to-gray-500 bg-clip-text text-transparent">
+                <div className="select-none" style={{ position: 'relative', lineHeight: 1, marginBottom: 'clamp(3rem, 8vw, 6rem)' }}>
+                    {/* Main text */}
+                    <h1
+                        className="font-black italic uppercase"
+                        style={{
+                            fontSize: 'clamp(5rem, 10vw, 10rem)',
+                            letterSpacing: '-0.02em',
+                            color: '#eab308',
+                            textShadow: '6px 6px 0px #1a1400, 10px 10px 0px rgba(0,0,0,0.5)',
+                            fontFamily: "'Geist', 'Arial Black', sans-serif",
+                            lineHeight: 0.9,
+                        }}
+                    >
                         {t.title}
-                    </span>
-                </h1>
-
+                    </h1>
+                </div>
                 {/* Subtitle */}
                 <p className="text-lg md:text-xl text-gray-500 max-w-xl mb-10 leading-relaxed font-light">
                     {t.description.split('<0>').map((text, i) =>
